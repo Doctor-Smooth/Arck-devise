@@ -1,0 +1,14 @@
+        <%= form_for @post do |f| %>
+          <div class="post-image">
+            <%= f.label :image %>
+            <%= f.file_field :image%>
+          </div>
+
+          <div class="post-description">
+            <%= f.label :description %>
+            <%= f.text_area :description %>
+          </div>
+          <% if user_signed_in? %>
+            <%= f.submit '投稿' %>
+          <% end %>
+        <% end %>  
