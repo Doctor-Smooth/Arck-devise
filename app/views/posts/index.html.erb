@@ -1,21 +1,75 @@
 <div class="post-index">
-  <div class="container">
-    <% @posts.each do |post| %>
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <div class="post-index-single">
-            <h2 class="post-author">
-              <%= post.user.name %>
-            </h2>
-            <%= image_tag post.image.url %>
-            <!--<%= image_tag 'icons/heart-black.png', class: 'post-index-icon' %>-->
-            <!--<%= image_tag 'icons/comment.png', class: 'post-index-icon' %>-->
-            <p class="post-text">
-              <%= post.description %>
-            </p>
-          </div>
+  <header id="header" role="banner">
+    <div class="container">
+      <div class="post-header-inner">
+        <h1 class="post-arck-logo"><%= link_to 'Arck', pages_index_path %></h1>
+        <div class="btn-post-create">
+          <%= link_to '投稿を作成する', new_post_path %>
+        </div>
+        <div class="btn btn-logout">
+          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
         </div>
       </div>
-    <% end %>
+    </div>
+      
+      <nav class="post-nav" role="navigation">
+          <ul>
+            <li class="col-md-3"><%= link_to 'タイムライン', posts_path, class: 'nav-link' %></li>
+            <li class="col-md-3"><%= link_to 'ブログ', new_post_path, class: 'nav-link' %></li>
+            <li class="col-md-3"><%= link_to '記事', new_post_path, class: 'nav-link' %></li>
+            <li class="col-md-3"><%= link_to 'マイページ', new_post_path, class: 'nav-link' %></li>
+          </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+    <div class="row">
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="active" role="presentation">
+          <a aria-controls="tab_a" data-toggle="tab" href="#tab_a" role="tab">A</a>
+        </li>
+        <li role="presentation">
+          <a aria-controls="tab_b" data-toggle="tab" href="#tab_b" role="tab">B</a>
+        </li>
+        <li role="presentation">
+          <a aria-controls="tab_c" data-toggle="tab" href="#tab_c" role="tab">C</a>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="tab_a" role="tabpanel">
+          <% @posts.each do |post| %>
+            <div class="col-md-6 col-md-offset-3">
+              <div class="post-index-single">
+                <h2 class="post-author">
+                  <%= post.user.name %>
+                </h2>
+                <%= image_tag post.image.url %>
+                <!--<%= image_tag 'icons/heart-black.png', class: 'post-index-icon' %>-->
+                <!--<%= image_tag 'icons/comment.png', class: 'post-index-icon' %>-->
+                <p class="post-text">
+                  <%= post.description %>
+                </p>
+              </div>
+            </div>
+          <% end %> 
+        </div>
+        <div class="tab-pane" id="tab_b" role="tabpanel">
+          <p>
+            タブBです
+          </p>
+        </div>
+        <div class="tab-pane" id="tab_c" role="tabpanel">
+          <p>
+            タブC!!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>  
+    
+    <div class="container">
+      <div class="row">
+        
+        </div>
+    </div>
   </div>
-</div>

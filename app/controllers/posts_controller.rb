@@ -7,23 +7,23 @@ class PostsController < ApplicationController
     @post = Post.new
   end
   
-  # def create
-  #   @topic = current_user.topics.new(topic_params)
+  def create
+    @post = current_user.posts.new(post_params)
     
-  #   if @topic.save!
-  #     redirect_to topics_path, success: '投稿に成功しました'
-  #   else
-  #     flash.now[:danger] = "投稿に失敗しました"
-  #     render :new
-  #   end
-  # end
+    if @post.save!
+      redirect_to posts_path
+    else
+      flash.now[:danger] = "投稿に失敗しました"
+      render :new
+    end
+  end
     
-  # def show
-  #   @topic = Topic.find_by(id: params[:id])
-  #   @user = @post.user
+  def show
+    @post = Topic.find_by(id: params[:id])
+    @user = @post.user
       
-  #   @favorites_count = Favorite.where(topic_id:@topic.id).count
-  # end
+    # @favorites_count = Favorite.where(topic_id:@topic.id).count
+  end
   
   private
   def post_params
