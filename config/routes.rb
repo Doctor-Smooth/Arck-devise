@@ -1,5 +1,7 @@
 Rails.application.routes.draw do 
-  get 'blogs/new'
+  # get 'blogs/index'
+  # get 'blogs/new'
+  # post 'blogs/create'
 
   root 'pages#index'
   get 'pages/index'

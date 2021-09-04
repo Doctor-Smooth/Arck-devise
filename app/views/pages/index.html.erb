@@ -1,25 +1,25 @@
   <div class="top-page">
-  <header id="header" role="banner">
-    <div class="container">
-      <div class="header-inner">
-        <h1 class="arck-logo"><a href="index.html">Arck</a></h1>
-        <nav role=navigation>
-          <ul>
-            <li><a href="work.html">活動</a></li>
-            <li><a href="introdution.html">機能紹介</a></li>
-            <li><a href="contact.html">お問い合わせ</a></li>
-            <% if user_signed_in? %>
-            <div class="btn btn-secondary whitecor-link">
-              <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-            </div>
-            <% else %>
-              <li class="register-btn"><%= link_to "はじめよう", new_user_registration_path %></li>
-            <% end %>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+  <!--<header id="header" role="banner">-->
+  <!--  <div class="container">-->
+  <!--    <div class="header-inner">-->
+  <!--      <h1 class="arck-logo"><a href="index.html">Arck</a></h1>-->
+  <!--      <nav role=navigation>-->
+  <!--        <ul>-->
+  <!--          <li><a href="work.html">活動</a></li>-->
+  <!--          <li><a href="introdution.html">機能紹介</a></li>-->
+  <!--          <li><a href="contact.html">お問い合わせ</a></li>-->
+  <!--          <% if user_signed_in? %>-->
+  <!--          <div class="btn btn-secondary whitecor-link">-->
+  <!--            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>-->
+  <!--          </div>-->
+  <!--          <% else %>-->
+  <!--            <li class="register-btn"><%= link_to "はじめよう", new_user_registration_path %></li>-->
+  <!--          <% end %>-->
+  <!--        </ul>-->
+  <!--      </nav>-->
+  <!--    </div>-->
+  <!--  </div>-->
+  <!--</header>-->
   </div>
   
   <div class="container arck-top-container">
@@ -137,13 +137,13 @@
     </div>
   </div>
   
-  <footer>
-    <div class="container">
-      <div class="col-md-4 col-md-offset-4 text-center">
-        <h3>About Us</h3>
-        <p>アプリのアイコンとか</p>
-      </div>
-    </div>
-  </footer>
+  <!--<footer>-->
+  <!--  <div class="container">-->
+  <!--    <div class="col-md-4 col-md-offset-4 text-center">-->
+  <!--      <h3>About Us</h3>-->
+  <!--      <p>アプリのアイコンとか</p>-->
+  <!--    </div>-->
+  <!--  </div>-->
+  <!--</footer>-->
 
   
