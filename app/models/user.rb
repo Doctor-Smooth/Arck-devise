@@ -12,4 +12,5 @@ class User < ApplicationRecord
   
   has_many :posts
   has_many :blogs
+  has_many :articles
 end
